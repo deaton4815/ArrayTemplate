@@ -28,7 +28,7 @@ int main() {
 	arraySize = 3;
 	MyArray<float> floatObj(arraySize);
 
-	float fTest[3]{ 1.5, 2.43, 3.897 };
+	float fTest[3]{ 1.5f, 2.33f, 3.157f };
 	for (int i{ 0 }; i < arraySize; i++) {
 		floatObj.setValue(fTest[i], i);
 	}
