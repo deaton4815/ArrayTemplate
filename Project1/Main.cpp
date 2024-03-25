@@ -5,26 +5,55 @@
 */
 
 #include <iostream>
+#include <string>
 
-#include "My_Array.h"
+#include "MyArray.h"
 
 using namespace std;
 
 int main() {
 	// Create array object
 	int arraySize{ 5 };
-	My_Array<int> existingObj(arraySize);
+	MyArray<int> intObj(arraySize);
 
-};
-	/*
 	// Fill array object with values
-	int testArray[5]{ 1, 2, 3, 4, 5 };
+	int iTest[5]{ 1, 2, 3, 4, 5 };
 	for (int i{ 0 }; i < arraySize; i++) {
-		existingObj.setValue(testArray[i], i);
+		intObj.setValue(iTest[i], i);
 	}
 
+	cout << "\nintObj:" << endl;
+	intObj.printArray();
+
+	arraySize = 3;
+	MyArray<float> floatObj(arraySize);
+
+	float fTest[3]{ 1.5, 2.43, 3.897 };
+	for (int i{ 0 }; i < arraySize; i++) {
+		floatObj.setValue(fTest[i], i);
+	}
+
+	cout << "\nfloatObj:" << endl;
+	floatObj.printArray();
+
+	arraySize = 5;
+	MyArray<string> stringObj(arraySize);
+
+	string sTest[5]{ "This", "is", "a", "string", "array" };
+
+	for (int i{ 0 }; i < arraySize; i++) {
+		stringObj.setValue(sTest[i], i);
+	}
+
+	cout << "\nstringObj:" << endl;
+	stringObj.printArray();
+
+};
+
+
+	/*
 	// Initialize new array object
-	My_Array<int> newObj{ existingObj };
+	MyArray<int> newObj{ existingObj };
 
 	// Show that newObj = existingObj
 	cout << "\nexistingObj:" << endl;
@@ -43,6 +72,6 @@ int main() {
 	existingObj.printArray(existingObj);
 	cout << "\nnewObj:" << endl;
 	newObj.printArray(newObj);
-
-}
+};
+	
 */
