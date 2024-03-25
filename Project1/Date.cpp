@@ -2,6 +2,16 @@
 
 using namespace std;
 
+Date::Date() = default;
+Date::Date(int month, int day, int year) {
+	setMonth(month);
+	setDay(day);
+	setYear(year);
+}
+
+Date::Date(const Date&) = default;
+Date& Date::operator=(const Date& rhs) = default;
+
 //Validate user entries for month, day and year.
 //Parameters:
 //	month, day, year: user-entries

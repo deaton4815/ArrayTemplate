@@ -14,7 +14,12 @@ public:
 		January = 1, February, March,
 		April, May, June, July, August, September,
 		October, November, December
-	};
+	};  
+
+	Date();
+	Date(int, int, int);
+	Date(const Date&);
+	Date& operator=(const Date& rhs);
 
 	//Validate user entries
 	bool isValidMonth(int) const;
@@ -61,7 +66,7 @@ private:
 	bool m_isLeapYear{ false };
 
 	//All month names
-	const string m_allMonthNames[12]{ "January", "February",
+	string m_allMonthNames[12]{ "January", "February",
 		"March", "April", "May", "June", "July", "August",
 		"Setpember", "October", "November", "December" };
 
